@@ -1,0 +1,81 @@
+*TA Assignments*
+
+Q-1 =>
+Write a code to print the following patterns:
+a)-
+    *            
+   * * 
+  * * * 
+ * * * * 
+* * * * *
+b)-
+        A 
+      B C 
+    D E F 
+  G H I J 
+K L M N O
+
+sol-
+
+a)-
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int star = 1;
+        int gaph = n-1;
+        for(int i=0 ; i<n ; i++){
+            //gaph
+            for(int j=0 ; j<gaph ; j++){
+                System.out.print("  ");
+            }
+
+            // star
+            for(int j=0; j<star ; j++){
+                System.out.print("*  ");
+            }
+            gaph--;
+            star++;
+            System.out.println();
+        }
+
+    }
+}
+
+
+
+b)-
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int star = 1;
+        int gaph = n-1;
+        char[] a = {'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+        int p=0;
+        for(int i=0 ; i<n ; i++){
+            //gaph
+            for(int j=0 ; j<gaph ; j++){
+                System.out.print("\t");
+            }
+
+            // Char
+            for(int j=0; j<star ; j++){
+                System.out.print(a[p]+"\t");
+                p++;
+            }
+            gaph--;
+            star++;
+            System.out.println();
+        }
+
+    }
+}
+
+
